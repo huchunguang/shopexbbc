@@ -1,0 +1,14 @@
+<desktop>
+
+    <permissions>
+        <permission id="aftersales" display='true' workground='sysaftersales.workground.aftersales'>售后列表</permission>
+    </permissions>
+
+    <workground name="售后" id="sysaftersales.workground.aftersales" app="sysaftersales" controller="list" action="index" order='40'>
+        <menugroup name='申请售后'>
+            <menu controller='list' action='index' permission='aftersales' display='true' order='10'>售后申请列表</menu>
+            <menu controller='refunds' action='index' permission='aftersales' display='true' order='10'>退款申请</menu>
+        </menugroup>
+    </workground>
+
+</desktop>

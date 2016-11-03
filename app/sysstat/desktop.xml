@@ -1,0 +1,43 @@
+<desktop>
+	<widgets id="sysstat_desktop_widgets_exstatistics" order='30'>平台订单额</widgets>
+	<widgets id="sysstat_desktop_widgets_workcount" order='30'>待处理事项</widgets>
+	<widgets id="sysstat_desktop_widgets_stats" order='30'>平台业务概览</widgets>
+	<permissions>
+		<permission id="operatingSurvey" display='true' parent='0' workground='sysstat.wrokground.analysis'>交易数据</permission>
+		<permission id="analysis" display='true' parent='0' workground='sysstat.wrokground.analysis'>经营概况(旧)</permission>
+        <permission id="saleanalysis" display='true' parent='0' workground='sysstat.wrokground.analysis'>销售收入统计(旧)</permission>
+        <permission id="advanceanalysis" display='true' parent='0' workground='sysstat.wrokground.analysis'>预存款统计(旧)</permission>
+        <permission id="shopsaleanalysis" display='true' parent='0' workground='sysstat.wrokground.analysis'>商城销售情况(旧)</permission>
+        <permission id="productsaleanalysis" display='true' parent='0' workground='sysstat.wrokground.analysis'>商品排行(旧)</permission>
+        <permission id="memberanalysis" display='true' parent='0' workground='sysstat.wrokground.analysis'>会员排行(旧)</permission>
+
+	</permissions>
+
+	<workground name="报表" id="sysstat.wrokground.analysis" app="sysstat" controller="admin_tradeData" action="dataAnalysis" order="60">
+		<menugroup name="交易数据(新)">
+			<menu controller='admin_tradeData' action='dataAnalysis' permission='operatingSurvey' display='true' order='10'>
+				交易数据(新)
+			</menu>
+			<menu controller='admin_tradeData' action='index' permission='operatingSurvey' display='true' order='20'>
+				数据下载(新)
+			</menu>
+		</menugroup>
+		<menugroup name="经营概况(旧)">
+            <menu controller='admin_analysis' action='index' permission='analysis' display='true' order='10'>经营概况(旧)</menu>
+        </menugroup>
+
+		<menugroup name="账款统计(旧)">
+            <menu controller='admin_analysis' action='sale' permission='saleanalysis' display='true' order='20'>销售收入统计(旧)</menu>
+        </menugroup>
+
+        <menugroup name="销售统计(旧)">
+            <menu controller='admin_analysis' action='shopsale' permission='shopsaleanalysis' display='true' order='40'>商城销售情况(旧)</menu>
+            <menu controller='admin_analysis' action='productsale' permission='productsaleanalysis' display='true' order='50'>商品销售排行(旧)</menu>
+        </menugroup>
+
+        <menugroup name="会员统计(旧)">
+            <menu controller='admin_analysis' action='member' permission='memberanalysis' display='true' order='60'>会员排行(旧)</menu>
+        </menugroup>
+
+	</workground>
+</desktop>

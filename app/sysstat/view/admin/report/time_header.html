@@ -1,0 +1,19 @@
+<div class="gridlist-action data-action" id="dataAction" style="margin-bottom:10px;padding:5px; border:0;">
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td <{if $report_type}>align="right"<{/if}> nowrap="nowrap">
+        <label><{t}>时间范围:<{/t}></label>
+          <{input type="date" vtype="date" name="time_from" style="width:66px; font-family:arial;" value=""}><{t}>至<{/t}>
+          <{input type="date" vtype="date" name="time_to" style="width:66px; font-family:arial;" value=""}>
+
+        <{button class="filterBtn btn-thirdly" app="ectools" label="确定"|t:'ectools'}>&nbsp;
+
+        <{button class="dataBtn  btn-fourthly" app="ectools" time_from=$yesterday time_to=$yesterday label="昨日"|t:'ectools'}>
+        <{button class="dataBtn  btn-fourthly" app="ectools" time_from=$yesterday time_to=$yesterday label="前日"|t:'ectools'}>
+        <{button class="dataBtn btn-fourthly" app="ectools" time_from=$this_week_from time_to=$this_week_to label="最近七天"|t:'ectools'}>
+        <{button class="dataBtn btn-fourthly" app="ectools" time_from=$last_week_from time_to=$last_week_to label="最近30天"|t:'ectools'}>
+      </td>
+    </tr>
+  </table>
+</div>
+

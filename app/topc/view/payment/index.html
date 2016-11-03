@@ -1,0 +1,45 @@
+<div id="header" class="header">
+  <div class="wrap-lg">
+    <div class="row">
+      <div class="col-lg-4 header-left">
+        <div class="logo">
+          <a href="<{url action=topc_ctl_default@index}>">
+            <{if $env.conf.sysconf.site.logo}>
+            <img src="<{$env.conf.sysconf.site.logo}>" alt="<{$env.conf.sysconf.site.name}>">
+            <{else}>
+            <img src="images/logo.png" alt="">
+            <{/if}>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-3 header-title">
+        订单支付
+      </div>
+      <div class="header-right">
+        <div class="status-bar2">
+          <div class="on">
+            <div class="bg"><span class="number">1</span></div>
+            <div class="txt">提交订单</div>
+          </div>
+          <div <{if $payment.status=='succ'}> class="on" <{/if}>>
+            <div class="bg"><span class="number">2</span></div>
+            <div class="txt"><{if $payment_type == "offline"}>货到付款 <{else}>线上付款<{/if}></div>
+          </div>
+          <div <{if $payment.status=='succ'}> class="on" <{/if}> >
+            <div class="bg"><span class="number">3</span></div>
+            <div class="txt">订单完成</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- main container -->
+<div id="main" class="main">
+  <div class="wrap-lg">
+    <!--登录支付平台弹框-->
+    <{include file=$mainfile}>
+
+  </div>
+</div>

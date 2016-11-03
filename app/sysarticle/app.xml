@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app>
+	<name>我的文章模块</name>
+	<description>提供系统我的文章模块</description>
+	<type>service</type>
+	<author>
+		<name>胡春光</name>
+		<email>383702275@qq.com</email>
+		<url>www.shopex.cn</url>
+	</author>
+	<version>V1.0</version>
+	<license>shopex license</license>
+	<depends>
+	  
+		<app>desktop</app>
+	
+	
+	</depends>
+</app>

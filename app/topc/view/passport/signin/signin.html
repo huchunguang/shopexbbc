@@ -1,0 +1,25 @@
+<div class="row offset-lg-1 login-wrap">
+  <div class="row-logo">
+    <div class="logo">
+      <a href="<{url action=topc_ctl_default@index}>">
+        <{if $env.conf.sysconf.site.logo}>
+        <img src="<{$env.conf.sysconf.site.logo}>" alt="<{$env.conf.sysconf.site.name}>">
+        <{else}>
+        <img src="<{$env.base_full_url}>/themes/demo/images/logo.png" alt="">
+        <{/if}>
+      </a>
+    </div>
+  </div>
+  <div class="col-lg-7">
+    <a href="<{url action=topc_ctl_default@index}>">
+      <{if $env.conf.sysconf.site.loginlogo}>
+      <img src="<{$env.conf.sysconf.site.loginlogo}>" alt="<{$env.conf.sysconf.site.name}>" alt="" width="515" height="360">
+      <{else}>
+      <img src="<{$env.base_full_url}>/themes/luckymall/images/demo_login.jpg" alt="" width="515" height="360">
+      <{/if}>
+    </a>
+  </div>
+  <div class="col-lg-7 login">
+    <{include file='topc/passport/signin/member-signin.html'}>
+  </div>
+</div>

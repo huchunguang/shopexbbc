@@ -1,0 +1,21 @@
+<app>
+
+<name>留言本</name>
+<description>这是一个留言本</description>
+<author>
+<name>shopex开发团队</name>
+<email>dev@shopex.cn</email>
+<url>http://www.shopex.cn</url>
+
+</author>
+
+<version>0.3</version>
+<license>shopex license</license>
+<depends>
+
+<app>base</app>
+
+
+</depends>
+
+</app>

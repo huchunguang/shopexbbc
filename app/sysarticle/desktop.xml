@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<desktop>
+	<permissions>
+	
+		<permission id="page" display="true" workground="site.workground.theme">我的文章</permission>
+	
+	</permissions>
+	<workground name="站点" id="site.workground.theme" controller="admin_module" action="index">
+		<menugroup name="我的文章">
+		
+			<menu controller="admin_article" action="index" permission="page" display="true" order="70">文章列表</menu>
+		
+		
+		</menugroup>
+	
+	
+	
+	
+	</workground>
+
+
+
+</desktop>

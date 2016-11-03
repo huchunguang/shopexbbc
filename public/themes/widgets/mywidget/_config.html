@@ -1,0 +1,59 @@
+<div class="tableform">
+	<table border="1" cellpadding="0" cellspacing="0">
+		<tr>
+			<th><em><font color="red">*</font></em>设置文章的栏目名称</th>
+			<td><{input type="text" vtype="requried" value=$setting.contentyag|default:"资讯门户" name="contenttag"}></td>
+			
+		
+		</tr>
+		<tr>
+			<th><em><font color="red">*</font></em><{t}>选择文章的节点<{/t}></th>
+			<td>
+				<select name="nodeId" id="" vtype="requried">
+					<{foreach from=$setting.maps item=maps}>
+					<option value="<{$maps.node_id}>" depth="<{$maps.step}>" parent_id="<{$maps.parent_id}>" <{if $maps.node_id=$setting.nodeId}>selected<{/if}>><{$space|paddingleft:$maps.step:#nbsp;#nbsp;#nbsp;#nbsp;}><{$maps.node_name}></option>
+					
+					<{/foreach}>
+				
+				
+				
+				
+				</select>
+			
+			
+			</td>
+		
+		
+		</tr>
+		<tr>
+			<th><{t}>展示文章的数目<{/t}></th>
+			<td><{input type="text" vtype="required" value=$setting.contentnum|default:'5' name="contentnum"}></td>
+		</tr>
+		<tr>
+			<th><{t}>展示文章的排序<{/t}></th>
+			<td>
+				<select name="nodeSort" id="">
+					<option value="timedesc" <{if $setting.nodeSort==timedesc}>selected<{/if}>>根据发布时间排序</option>
+					<option value="timeasc" <{if $setting.nodeSort==timeasc}>selected<{/if}>>根据发布时间升序</option>
+				
+				
+				
+				
+				</select>
+			
+			
+			</td>
+		
+		</tr>
+	
+	
+	
+	
+	</table>
+
+
+
+
+
+
+</div>

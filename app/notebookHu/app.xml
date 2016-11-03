@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app>
+<name>notebookHu</name>
+<description>这是测试的app</description>
+<author>
+	<name>notebookHu</name>
+	<url>http://www.baidu.com</url>
+	<email>383702275@qq.com</email>
+
+</author>
+<depends>
+
+	<app>base</app>
+
+</depends>
+</app>

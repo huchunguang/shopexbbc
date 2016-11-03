@@ -1,0 +1,8 @@
+ <div class="logo"><a href="<{url action=topc_ctl_default@index}>">
+    <{if file_exists($data.logo)}>
+    <img src="<{$data.logo}>" alt="<{$data.logotxt}>"></a>
+    <{else}>
+    <img src="images/logo.png" alt="<{$data.logotxt}>"></a>
+    <{/if}>
+</div>
+
